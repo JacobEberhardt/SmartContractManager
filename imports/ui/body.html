@@ -1,0 +1,61 @@
+<!-- Structure from: https://atmospherejs.com/ethereum/dapp-styles -->
+
+<body>
+<header class="dapp-header">
+    <nav>
+        <ul>
+            <li>
+                <a href="#" class="active">
+                    <i class="icon-arrow-down3"></i>
+                    <span>Contracts</span>
+                </a>
+                <a href="#">
+                    <i class="icon-arrow-up2"></i>
+                    <span>Offer Data</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<div class="dapp-flex-content">
+    
+    <!-- aside -->
+    <aside class="dapp-aside">
+        <nav>
+            <ul>
+                <li>
+                    <a href="#" class="active">
+                        <i class="icon-arrow-down3"></i>
+                        <span>Deploy new contract</span>
+                    </a>
+                    <a href="#">
+                        <i class="icon-arrow-up2"></i>
+                        <span>Get contract by address</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+    </aside>
+
+    <!-- content-->
+    <main class="dapp-content">
+            {{> contract}}
+    	    {{> accounts}}
+    </main>
+
+
+
+    <!-- actionbar -->
+    <aside class="dapp-actionbar">
+        <h4>Current Block</h4>
+    	{{currentBlock}}
+    </aside>
+
+</div>
+
+<!-- footer -->
+<footer class="dapp-footer">
+<h2>Footer</h2>
+</footer>
+</body>

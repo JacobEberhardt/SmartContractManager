@@ -1,0 +1,24 @@
+<template name="contract">
+    <h3>Create Contract</h3>
+    <form>
+        <input type="text" name="text" placeholder="Paste Solidity Code here and hit enter."/>
+    </form>
+
+    {{#if compiled}}
+        <h4>Contract: {{name}}</h4>
+        <h4>Application Binary Interface:</h4>
+
+        {{#each entry in abi}}
+            <div class="dapp-box">
+                <b>{{entry.type}}</b>
+                {{#if entry.name}}
+                    <b>{{entry.name}}</b>
+                {{/if}}
+                <br>
+                input: {{entry.input}}<br>
+                output: {{entry.output}}<br>
+            </div>
+        {{/each}}
+
+    {{/if}}
+</template>
