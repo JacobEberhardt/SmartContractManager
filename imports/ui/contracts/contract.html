@@ -5,20 +5,24 @@
     </form>
 
     {{#if compiled}}
-        <h4>Contract: {{name}}</h4>
-        <h4>Application Binary Interface:</h4>
+        <p>
+            <span class="label label-success">Compilation successful</span>
+        </p>
+        {{#each contract in contracts}}
+            <h3>Contract: {{contract.name}}</h3>
+            <h4>Application Binary Interface:</h4>
 
-        {{#each entry in abi}}
-            <div class="dapp-box">
-                <b>{{entry.type}}</b>
-                {{#if entry.name}}
-                    <b>{{entry.name}}</b>
-                {{/if}}
-                <br>
-                input: {{entry.input}}<br>
-                output: {{entry.output}}<br>
-            </div>
+            {{#each entry in contract.value.info.abiDefinition}}
+                <div class="dapp-box">
+                    <b>{{entry.type}}</b>
+                    {{#if entry.name}}
+                        <b>{{entry.name}}</b>
+                    {{/if}}
+                    <br>
+                    input: {{entry.input}}<br>
+                    output: {{entry.output}}<br>
+                </div>
+            {{/each}}
         {{/each}}
-
     {{/if}}
 </template>
