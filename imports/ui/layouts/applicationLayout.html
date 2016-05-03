@@ -1,0 +1,66 @@
+<!-- Structure from: https://atmospherejs.com/ethereum/dapp-styles -->
+
+<template name="applicationLayout">
+    <!-- header -->
+    <header class="dapp-header">
+        {{> headerTemplate}}
+    </header>
+
+    <div class="dapp-flex-content">
+        <!-- sidebar -->
+        <aside class="dapp-aside">
+            {{> Template.dynamic template=sidebar}}
+        </aside>
+
+        <!-- main content -->
+        <main class="dapp-content">
+            {{> Template.dynamic template=main}}
+        </main>
+    </div>
+
+    <!-- footer -->
+    <footer class="dapp-footer">
+        {{> footerTemplate}}
+    </footer>
+</template>
+
+
+<template name="headerTemplate">
+    <nav>
+        <ul>
+            <li>
+                <a href="#" class="active">
+                    <i class="icon-arrow-down3"></i>
+                    <span>Contracts</span>
+                </a>
+                <a href="#">
+                    <i class="icon-arrow-up2"></i>
+                    <span>Accounts</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</template>
+
+<template name="footerTemplate">
+    <h4><a href="http://www.ise.tu-berlin.de">ISE@TU-Berlin</a></h4>
+</template>
+
+<template name="sidebarTemplate">
+    <nav>
+        <ul>
+            <li>
+                <a href="#" class="active">
+                    <i class="icon-arrow-down3"></i>
+                    <span>Deploy new contract</span>
+                </a>
+                <a href="#">
+                    <i class="icon-arrow-up2"></i>
+                    <span>Get contract by address</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</template>
+
+

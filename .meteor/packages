@@ -28,3 +28,5 @@ ethereum:blocks
 less
 reactive-dict
 twbs:bootstrap
+kadira:flow-router
+kadira:blaze-layout
